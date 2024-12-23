@@ -1,0 +1,57 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Virtual environment (make sure to ignore any virtual environment folder)
+env/
+venv/
+ENV/
+
+# Django files
+*.log
+*.sqlite3
+db.sqlite3
+
+# Node.js dependencies (if you're using Node.js for front-end or other dependencies)
+node_modules/
+
+# Cloudinary file (if you don't want to track this)
+cloudinary_python.txt
+
+# GitHub files (ignore GitHub-specific configuration)
+.github/
+
+# Microsoft files (if you're on Windows or using Visual Studio Code/VS)
+core.Microsoft*
+core.mongo*
+core.python*
+
+# .env file (for environment variables)
+env.py
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Docker files (if using Docker)
+.docker/
+docker-compose.yml
+
+# Test coverage files
+.coverage
+.coverage.*
+nosetests.xml
+tox.ini
