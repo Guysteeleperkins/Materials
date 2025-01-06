@@ -1,11 +1,40 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center">Welcome to the Events Page</h1>
+<h1>Events</h1>
+
+    <div>
+        <button onclick="toggleSection('upcoming')">Upcoming Events</button>
+        <button onclick="toggleSection('past')">Past Events</button>
     </div>
-  </div>
-</div>
+
+    <!-- Upcoming Events Section -->
+    <div id="upcoming-section">
+        <h2>Upcoming Events</h2>
+        {% for event in events %}
+            {% if event.status == 'upcoming' %}
+                <div>
+                    <h3>{{ event.title }}</h3>
+                    <p>{{ event.description }}</p>
+                    <p>Date: {{ event.event_date }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- Past Events Section -->
+    <div id="past-section" style="display: none;">
+        <h2>Past Events</h2>
+        {% for event in events %}
+            {% if event.status == 'past' %}
+                <div>
+                    <h3>{{ event.title }}</h3>
+                    <p>{{ event.description }}</p>
+                    <p>Date: {{ event.event_date }}</p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 
 {% endblock %}

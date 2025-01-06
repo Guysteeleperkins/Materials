@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
 if os.path.isfile("env.py"):
     import env
 
@@ -43,6 +44,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "cloudinary_storage",
+    "cloudinary",
     "home",
     "events",
     "about",
@@ -59,7 +62,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "Materials.urls"
+ROOT_URLCONF = 'Materials.urls'
 
 TEMPLATES = [
     {
@@ -78,6 +81,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "Materials.wsgi.application"
+
+#  Cloudinary - This code removes the console error mixed content and loads the images as HTTPS not HTTP
+
+cloudinary.config(secure=True,)
 
 
 # Database
