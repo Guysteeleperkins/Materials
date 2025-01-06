@@ -14,3 +14,9 @@ class EventsPage(TemplateView):
 def events_page(request):
     events = Event.objects.all().order_by('event_date')  # Fetch all events
     return render(request, 'events.html', {'events': events})
+
+class AddEvent(TemplateView):
+    """
+    Displays events page"
+    """
+    template_name = 'events/addevent.html'
