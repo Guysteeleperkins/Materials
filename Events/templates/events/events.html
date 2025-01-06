@@ -5,12 +5,12 @@
 <h1>Events</h1>
 
     <div>
-        <button onclick="toggleSection('upcoming')">Upcoming Events</button>
-        <button onclick="toggleSection('past')">Past Events</button>
+        <button id="upcoming-btn">Upcoming Events</button>
+        <button id="past-btn">Past Events</button>
     </div>
 
     <!-- Upcoming Events Section -->
-    <div id="upcoming-section">
+    <div id="upcoming-events">
         <h2>Upcoming Events</h2>
         {% for event in events %}
             {% if event.status == 'upcoming' %}
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Past Events Section -->
-    <div id="past-section" style="display: none;">
+    <div id="past-events" style="display: none;">
         <h2>Past Events</h2>
         {% for event in events %}
             {% if event.status == 'past' %}
@@ -37,4 +37,8 @@
         {% endfor %}
     </div>
 
+{% endblock %}
+
+{% block extras %}
+    <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

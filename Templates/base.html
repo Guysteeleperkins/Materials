@@ -32,7 +32,7 @@
 
   <body class="d-flex flex-column h-100">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg custom-toggler">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
           <span class="navbar-header">
@@ -115,6 +115,7 @@
       crossorigin="anonymous"
     ></script>
 
-    {% block extras %} {% endblock %}
+    {% block extras %} 
+    {% endblock %}
   </body>
 </html>
