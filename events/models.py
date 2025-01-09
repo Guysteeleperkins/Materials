@@ -17,7 +17,7 @@ class Event(models.Model):
     image = CloudinaryField('image', blank=True, null=True)
     slug = models.SlugField(unique=True, blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-    event_date = models.DateField(blank=True, null=True)  # Optional event date
+    event_date = models.DateField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
         # Automatically set the slug if it's not set

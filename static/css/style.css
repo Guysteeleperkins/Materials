@@ -44,72 +44,9 @@ main {
     padding: 0 0 10px 0;
 }
 
-.hero {
+.hero img {
     z-index: 1000;
     height: 80vh; /* Full viewport height */
     background-size: cover;
     background-position: center;
-    animation: slideshow 50s infinite linear; /* 10-second loop */
   }
-
-@keyframes slideshow {
-    /* Image 1 */
-    0% { 
-        background-image: url('/static/images/hero-1.jpg'); 
-        opacity: 1; 
-    }
-    15% { 
-        background-image: url('/static/images/hero-1.jpg'); 
-        opacity: 1; /* Fully visible */
-    }
-
-    /* Image 2 */
-    20% { 
-        background-image: url('/static/images/hero-5.jpg'); 
-        opacity: 1; /* Fade in next image */
-    }
-    35% { 
-        background-image: url('/static/images/hero-5.jpg'); 
-        opacity: 1; /* Fully visible */
-    }
-    /* Image 3 */
-    40% { 
-        background-image: url('/static/images/hero-3.jpg'); 
-        opacity: 1; /* Fade in next image */
-    }
-    55% { 
-        background-image: url('/static/images/hero-3.jpg'); 
-        opacity: 1; /* Fully visible */
-    }
-    /* Image 4 */
-    60% { 
-        background-image: url('/static/images/hero-4.jpg'); 
-        opacity: 1; /* Fade in next image */
-    }
-    75% { 
-        background-image: url('/static/images/hero-4.jpg'); 
-        opacity: 1; /* Fully visible until end of animation */
-    }
-    /* Image 5 */
-    80% { 
-        background-image: url('/static/images/hero-2.jpg'); 
-        opacity: 1; /* Fade in next image */
-    }
-    95% { 
-        background-image: url('/static/images/hero-2.jpg'); 
-        opacity: 1; /* Fully visible until end of animation */
-    }
-    /* Loop back to the first image */
-}
-
-/* Media Query */
-
-@media (max-width: 576px) {
-    .home-logo {
-        width: 50vw;
-        height: 50vw;
-        object-fit: cover;
-        padding: 0;
-        margin-top: 20px;
-    }
-}

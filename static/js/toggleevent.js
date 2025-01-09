@@ -1,4 +1,6 @@
 
+// Function for button that toggles between past and upcoming events
+
 document.addEventListener('DOMContentLoaded', function () {
     const upcomingEvents = document.getElementById('upcoming-events');
     const pastEvents = document.getElementById('past-events');

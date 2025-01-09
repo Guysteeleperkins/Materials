@@ -23,4 +23,5 @@ urlpatterns = [
     path('', include('home.urls')),
     path('events', include('events.urls')),
     path('about', include('about.urls')),
+    path('add-event', include('events.urls')),
 ]
