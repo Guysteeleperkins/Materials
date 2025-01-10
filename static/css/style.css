@@ -32,7 +32,9 @@ main {
     height: 40px;
   }
   
-
+.socials a i {
+    color: white;
+}
 
 /* Home page styles */
 
@@ -50,3 +52,29 @@ main {
     background-size: cover;
     background-position: center;
   }
+
+
+/* Events Page */
+
+#upcoming-btn, #past-btn {
+    width: 15vw;
+    border: white 2px solid;
+    background-color: #171A1C;
+    color: white;
+}
+
+#upcoming-btn:hover, #past-btn:hover {
+    width: 15vw;
+    border: white 2px solid;
+    background-color: white;
+    color: #171A1C;
+    font-weight: 500;
+}
+
+#upcoming-btn {
+    border-radius: 10px 0 0 10px;
+}
+
+#past-btn {
+    border-radius: 0 10px 10px 0;
+}

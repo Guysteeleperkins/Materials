@@ -2,12 +2,22 @@
 {% load static %}
 {% block content %}
 
-<h1>Events</h1>
-
-    <div>
-        <button id="upcoming-btn">Upcoming Events</button>
-        <button id="past-btn">Past Events</button>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1>Events</h1>
+        </div>
     </div>
+    <div class="row">
+        <div class="col d-flex justify-content-end p-0">
+            <button id="upcoming-btn">Upcoming Events</button>
+        </div>
+        <div class="col d-flex justify-content-start p-0">
+            <button id="past-btn">Past Events</button>
+        </div>
+    </div>
+</div>
+
 
     <!-- Upcoming Events Section -->
     <div id="upcoming-events">

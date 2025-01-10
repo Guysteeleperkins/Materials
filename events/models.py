@@ -18,6 +18,8 @@ class Event(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
     event_date = models.DateField(blank=True, null=True)
+    start_time = models.TimeField(blank=True, null=True)
+    end_time = models.TimeField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
         # Automatically set the slug if it's not set

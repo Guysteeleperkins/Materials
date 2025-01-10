@@ -11,7 +11,7 @@ from .forms import EventForm
 
 class AddEvent(CreateView):
     model = Event
-    fields = ['title', 'description', 'location', 'ticket_link', 'image', 'slug', 'status', 'event_date',]
+    fields = ['title', 'description', 'location', 'ticket_link', 'image', 'slug', 'status', 'event_date', 'start_time', 'end_time',]
     template_name = 'events/add-event.html'
     success_url = reverse_lazy('events')
 
